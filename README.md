@@ -8,12 +8,13 @@ location-aware environment activation
 
 [Recent discussion on Hacker News](https://news.ycombinator.com/item?id=39249005)
 
-Adaptation of `poetry-env`, a plugin included in default `oh-my-zsh` installations
 ---
+New `rye` version of `poetry-env`, a plugin included with [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
 
-#### Why use this?
+#### Why use this plugin with rye?
  - Configures your python development environment automatically when you enter a folder bootstrapped with `rye`
- - Plays nice with `virtualenv` and `pyenv` (`poetry` _untested_) 
+ - Plays nice with `virtualenv` and `pyenv` (`poetry` _untested_)
+ - Minimal and effective
 
 Here's the original `poetry-env`[source](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/poetry-env)
 ---
@@ -24,8 +25,7 @@ This plugin automatically changes `rye` environment when you enter a `rye` proje
 Script looks for `pyproject.toml` file to determine if its a `rye` environment.
 ---
 
-### Please note:
-all configuration scenarios assume you already have `rye` installed.  
+Still need to install `rye`?  
 ---
 [Official rye installation instructions](https://rye-up.com/guide/installation/)
 
@@ -49,9 +49,7 @@ all configuration scenarios assume you already have `rye` installed.
 		`autoload`
 		`chpwd`
 
-### Optional (but _preferred_):
----
-		`oh my zsh`
+Optional (but _recommended_): `oh my zsh`
 
 # Usage:
 _without_ [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh): 
@@ -68,7 +66,7 @@ _without_ [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh):
 	zsh
 ```
 
-**With** [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh): 
+**With** oh-my-zsh: 
 >tested w/ Arch linux official rye package, _global config not sourced_
 ---
  1. clone this repo to `$ZSH/custom/plugins/rye-env`
@@ -94,7 +92,7 @@ add `rye-env` _here_:
 ```zsh
 # note: other plugins shown not necessary
 # 	included to demonstrate order
-plugins=(asdf ... python rye-env virtualenv)
+	plugins=(asdf ... python rye-env virtualenv)
 ```
 
 save file, exit, and reload `.zshrc` - one method: 
@@ -117,5 +115,4 @@ Also, _don't forget_:
 ```
 
 --- 
-20240506 
-Feel free to contact me if you have any questions
+20240506 [Feel free to contact me if you have any questions](https://develmonk.com)
