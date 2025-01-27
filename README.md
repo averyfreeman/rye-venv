@@ -1,3 +1,5 @@
+Note: As the result of leaving oh-my-zsh for vanilla zsh, and Rye for mise: https://github.com/jdx/mise I am archiving this repo.
+
 # zsh plugin: rye-venv
 location-aware environment activation
 ---
